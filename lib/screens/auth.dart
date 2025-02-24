@@ -28,6 +28,9 @@ class _AuthScreensState extends State<AuthScreens> {
     final isValid = _form.currentState!.validate();
 
     if (!isValid) {
+      setState(() {
+        _isSending = false;
+      });
       return;
     }
 
